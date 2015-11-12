@@ -1,28 +1,73 @@
 @import "compass/typography/vertical_rhythm";
+@import "compass/typography/text/replacement";
+@import "compass/typography/lists/horizontal-list";
 
 @include establish-baseline;
 @include border-box-sizing;
 
+html {
+  font-size: $base-font-size;
+  background-color: $color-fondo;
+  color: $color-texto;
+  font-family: 'Cabin', sans-serif;
+}
 
 h1 {
-@include leader(1, 36px);
 @include adjust-font-size-to(36px);
-@include trailer(1, 36px);
+@include adjust-leading-to(2, 36px);
+@include span(full);
+font-family: 'Lobster', sans-serif;
 }
 h2 {
-@include leader(1, 30px);
 @include adjust-font-size-to(30px);
-@include trailer(1, 30px);
-font-style: italic;
+@include leader(1, 30px);
+font-weight: bold;
+font-family: 'Lato', sans-serif;
+}
+aside h2 {
+@include adjust-font-size-to(30px);
+@include leader(1, 30px);
 }
 h3 {
-@include leader(1, 28px);
-@include adjust-font-size-to(28px);
+@include adjust-font-size-to(25px);
+@include adjust-leading-to(1, 25px);
+font-weight: bold;
 }
+
+
 p {
-  @include leader(1, 25px);
-  @include adjust-font-size-to(25px);
+@include adjust-font-size-to(24px);
+
 }
+li {
+@include adjust-font-size-to(24px);
+}
+
 dt {
   float: left;
+  min-width: 30px;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+a, a:hover, a:active, a:visited {
+  color: $color-enlace;
+}
+a.libro {
+  @include replace-text-with-dimensions("cover.png");
+  display: block;
+  @include span(full);
+}
+.ultimaspaginas {
+  @include horizontal-list;
+  @include leader(0.5);
+  @include trailer(0.5);
+}
+// AFICIONES
+.ellibro {
+  @include trailer(1);
+}
+.herramientas {
+  @include trailer(2);
 }

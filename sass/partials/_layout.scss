@@ -8,12 +8,12 @@ $susy: (
   container: 90%,
   container-position: center,
   columns: 12,
-  gutters: .25,
+  gutters: 1,
   column-width: false,
   global-box-sizing: content-box,
   last-flow: to,
   debug: (
-    image: hide,
+    image: show,
     color: rgba(#66f, .25),
     output: background,
     toggle: top right,
@@ -22,10 +22,20 @@ $susy: (
 
 #page {
 @include container;
+background-color: $color-blanco;
+padding: 0 span(1);
 }
 main {
-@include span(8);
+@include span(12);
+
 }
 aside {
-
+@include span(12);
+}
+@include breakpoint($tabletas){
+  main {
+  @include span(8);  }
+  aside {
+  @include span(4 last);
+  }
 }

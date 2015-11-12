@@ -1,14 +1,16 @@
 // vertical rhythm
 $base-font-size: 20px; // Sets the base font size
-$base-line-height: 36px; // Sets the base line height
+$base-line-height: 46px; // Sets the base line height
 
 $round-to-nearest-half-line: true; // Allows compass to round to  multiples of 0.5x line height
 $rhythm-unit: "rem"; // Sets rhythm unit to rem. Remove to use default em unit.
 
 // Note these are custom. You have to tell compass to use them yourself
-$h1-fz: 45px;
-$h2-fz: 30px;
-$h3-fz: 24px;
-$h4-fz: 20px;
-$h5-fz: 16px;
-$h6-fz: 13px;
+
+$tabletas: 500px;
+// colores
+
+$color-enlace: #EC7263;
+$color-fondo: #ededed;
+$color-texto: #363636;
+$color-blanco: #fff;

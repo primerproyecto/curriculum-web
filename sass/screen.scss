@@ -4,6 +4,8 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "susy";
+@import "../bower_components/compass-breakpoint/stylesheets/breakpoint";
+
 @import "compass/reset";
 
 // VARIABLES
@@ -14,3 +16,4 @@
 
 // estilos particulares
 @import "partials/style";
+// @import "partials/sprite";
