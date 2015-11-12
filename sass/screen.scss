@@ -3,4 +3,14 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+@import "susy";
 @import "compass/reset";
+
+// VARIABLES
+@import "partials/variables";
+
+// estilos layouts susy
+@import "partials/layout";
+
+// estilos particulares
+@import "partials/style";

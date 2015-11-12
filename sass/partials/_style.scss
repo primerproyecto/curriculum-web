@@ -1,0 +1,28 @@
+@import "compass/typography/vertical_rhythm";
+
+@include establish-baseline;
+@include border-box-sizing;
+
+
+h1 {
+@include leader(1, 36px);
+@include adjust-font-size-to(36px);
+@include trailer(1, 36px);
+}
+h2 {
+@include leader(1, 30px);
+@include adjust-font-size-to(30px);
+@include trailer(1, 30px);
+font-style: italic;
+}
+h3 {
+@include leader(1, 28px);
+@include adjust-font-size-to(28px);
+}
+p {
+  @include leader(1, 25px);
+  @include adjust-font-size-to(25px);
+}
+dt {
+  float: left;
+}
