@@ -232,7 +232,11 @@ a.libro {
   border-radius: 5px;
   -moz-box-shadow: #363636 2px 2px 10px;
   -webkit-box-shadow: #363636 2px 2px 10px;
-  box-shadow: #363636 2px 2px 10px; }
+  box-shadow: #363636 2px 2px 10px;
+  margin-bottom: 36px;
+  margin-bottom: 2rem;
+  margin-top: 36px;
+  margin-top: 2rem; }
 
 .ultimaspaginas {
   margin: 0;
