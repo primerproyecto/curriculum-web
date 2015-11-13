@@ -1,6 +1,4 @@
-@import "compass/typography/vertical_rhythm";
-@import "compass/typography/text/replacement";
-@import "compass/typography/lists/horizontal-list";
+
 
 @include establish-baseline;
 @include border-box-sizing;
@@ -9,40 +7,61 @@ html {
   font-size: $base-font-size;
   background-color: $color-fondo;
   color: $color-texto;
-  font-family: 'Cabin', sans-serif;
-}
+  font-family: 'PT Sans Narrow', sans-serif;
 
+}
 h1 {
-@include adjust-font-size-to(36px);
-@include adjust-leading-to(2, 36px);
-@include span(full);
-font-family: 'Lobster', sans-serif;
+@include adjust-font-size-to(33px);
+@include adjust-leading-to(2, 33px);
+@include leader(1);
+padding-left: 15%;
+padding-right: 15%;
+@include trailer(1);
+font-family: 'Montserrat', sans-serif;
+@include single-text-shadow;
+}
+header h1 span {
+  color: $color-enlace;
+  font-weight: bold;
 }
 h2 {
 @include adjust-font-size-to(30px);
 @include leader(1, 30px);
-font-weight: bold;
-font-family: 'Lato', sans-serif;
+@include trailer(1, 30px);
+@include single-text-shadow;
+font-family: 'Montserrat', sans-serif;
 }
 aside h2 {
 @include adjust-font-size-to(30px);
 @include leader(1, 30px);
+@include single-text-shadow;
 }
 h3 {
-@include adjust-font-size-to(25px);
-@include adjust-leading-to(1, 25px);
-font-weight: bold;
+@include adjust-font-size-to(22px);
+@include adjust-leading-to(1, 22px);
+color: darken($color-blanco, 40% );
+font-family: 'Lato', sans-serif;
+@include single-text-shadow;
 }
-
-
 p {
-@include adjust-font-size-to(24px);
-
+@include adjust-font-size-to(22px);
+font-family: 'PT Sans Narrow', sans-serif;
 }
-li {
-@include adjust-font-size-to(24px);
+.experiencia p {
+/*  @include leader(1);
+  @include trailer(1);*/
+}
+li, dd {
+@include adjust-font-size-to(22px);
+font-family: 'PT Sans Narrow', sans-serif;
 }
 
+/*.datospersonales {
+  @include leader(0);
+  @include breakpoint($tabletas){
+    @include leader (5);
+  }
+}*/
 dt {
   float: left;
   min-width: 30px;
@@ -57,7 +76,8 @@ a, a:hover, a:active, a:visited {
 a.libro {
   @include replace-text-with-dimensions("cover.png");
   display: block;
-  @include span(full);
+  @include border-radius(5px);
+  @include box-shadow($color-texto 2px 2px 10px);
 }
 .ultimaspaginas {
   @include horizontal-list;
@@ -66,8 +86,11 @@ a.libro {
 }
 // AFICIONES
 .ellibro {
-  @include trailer(1);
+  @include trailer(2);
 }
 .herramientas {
-  @include trailer(2);
+  @include breakpoint($tabletas){
+    @include trailer(6);
+  }
+
 }

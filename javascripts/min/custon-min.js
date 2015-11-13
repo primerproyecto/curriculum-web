@@ -1,1 +1,1 @@
-jQuery(document).ready(function($){$(".experiencia h3").prepend("<i class='fa fa-asterisk'></i> ")});
+jQuery(document).ready(function($){});

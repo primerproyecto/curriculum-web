@@ -1,13 +1,21 @@
 // vertical rhythm
-$base-font-size: 20px; // Sets the base font size
-$base-line-height: 46px; // Sets the base line height
+
+$base-font-size: 18px; // Sets the base font size
+$base-line-height: 36px; // Sets the base line height
+
+$base-font-size-movil: 15px; // size of the font for tabletas
+$base-line-height-movil: 30px; // size of the line height for tabletas
+
+$base-font-size-pantallones: 20px; // size of the font for pantallones
+$base-line-height-pantallones: 46px; // size of the line height for pantallones
 
 $round-to-nearest-half-line: true; // Allows compass to round to  multiples of 0.5x line height
 $rhythm-unit: "rem"; // Sets rhythm unit to rem. Remove to use default em unit.
 
 // Note these are custom. You have to tell compass to use them yourself
 
-$tabletas: 500px;
+$tabletas: 700px;
+$pantallones: 1100px;
 // colores
 
 $color-enlace: #EC7263;

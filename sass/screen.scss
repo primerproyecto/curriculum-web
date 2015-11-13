@@ -7,7 +7,11 @@
 @import "../bower_components/compass-breakpoint/stylesheets/breakpoint";
 
 @import "compass/reset";
-
+@import "compass/typography/vertical_rhythm";
+@import "compass/typography/text/replacement";
+@import "compass/typography/lists/horizontal-list";
+@import "compass/css3";
+@import "partials/fonts";
 // VARIABLES
 @import "partials/variables";
 

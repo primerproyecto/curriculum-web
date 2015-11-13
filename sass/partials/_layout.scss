@@ -23,11 +23,25 @@ $susy: (
 #page {
 @include container;
 background-color: $color-blanco;
-padding: 0 span(1);
+padding-left: span(1);
+padding-right: span(1);
+margin-top: span(1);
+margin-bottom: span(1);
+@include box-shadow($color-texto 2px 2px 10px);
+@include border-radius(5px);
+}
+header {
+  @include span(full);
+  text-align: center;
+  img {
+    width: 130px;
+    @include border-radius(360px);
+    @include leader(1);
+    @include box-shadow($color-texto 2px 2px 10px);
+  }
 }
 main {
 @include span(12);
-
 }
 aside {
 @include span(12);
