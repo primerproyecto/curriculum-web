@@ -221,7 +221,7 @@ a.libro {
   overflow: hidden;
   text-align: left;
   text-transform: capitalize;
-  background-image: url('/images/cover.png?1447347685');
+  background-image: url('../images/cover.png?1447347685');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 300px;
