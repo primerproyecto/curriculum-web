@@ -38,7 +38,7 @@ aside h2 {
 }
 h3 {
 @include adjust-font-size-to(22px);
-@include adjust-leading-to(1, 22px);
+margin: rythym(0.5) 22px;
 color: darken($color-blanco, 40% );
 font-family: 'Lato', sans-serif;
 @include single-text-shadow;
@@ -95,4 +95,21 @@ a.libro {
     @include trailer(6);
   }
 
+}
+// SPRITE
+@import "herramientas/*.png";
+@include all-herramientas-sprites;
+.herramientas a {
+  display: block;
+  width: 64px;
+  height: 64px;
+}
+.herramientas ul {
+  display: flex;
+  li {
+    margin-right: 15px;
+    text-align: center;
+     @include adjust-leading-to(1);
+  }
+  @include trailer(1);
 }

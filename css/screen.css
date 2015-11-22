@@ -74,6 +74,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     content: " ";
     display: block;
     clear: both; }
+  head {
+    display: block;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 999;
+    color: #333;
+    background: rgba(255, 255, 255, 0.25); }
+  head:before {
+    content: "|||";
+    display: block;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold; }
+  head:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: red; }
+  head:hover ~ #page, head:hover ~ body #page {
+    position: relative; }
+    head:hover ~ #page:before, head:hover ~ body #page:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      content: " ";
+      z-index: 998; }
 
 header {
   width: 100%;
@@ -175,8 +203,7 @@ h3 {
   font-size: 1.22222rem;
   line-height: 36px;
   line-height: 2rem;
-  line-height: 36px;
-  line-height: 2rem;
+  margin: rythym(0.5) 22px;
   color: #999999;
   font-family: 'Lato', sans-serif;
   text-shadow: 0px 0px 1px #aaaaaa; }
@@ -271,3 +298,367 @@ a.libro {
   .herramientas {
     margin-bottom: 216px;
     margin-bottom: 12rem; } }
+
+.herramientas-sprite, .herramientas-air, .herramientas-android, .herramientas-angular, .herramientas-apache, .herramientas-atom, .herramientas-backbone, .herramientas-bigcartel, .herramientas-bitbucket, .herramientas-blackberry, .herramientas-bootstrap, .herramientas-bower, .herramientas-c, .herramientas-chai, .herramientas-chrome, .herramientas-chromium, .herramientas-code-climate, .herramientas-codemirror, .herramientas-codepen, .herramientas-compass, .herramientas-composer, .herramientas-cordova, .herramientas-couchdb, .herramientas-coveralls, .herramientas-css3, .herramientas-david-dm, .herramientas-debian, .herramientas-django, .herramientas-drupal, .herramientas-editorconfig, .herramientas-fedora, .herramientas-firefox-dev, .herramientas-firefox-os, .herramientas-firefox, .herramientas-flash, .herramientas-flattr, .herramientas-font-awesome, .herramientas-git, .herramientas-gitbook, .herramientas-github, .herramientas-gitlab, .herramientas-gnu, .herramientas-gradle, .herramientas-grunt, .herramientas-gtk, .herramientas-gulp, .herramientas-h5bp, .herramientas-hbase, .herramientas-html5, .herramientas-humans-txt, .herramientas-ie, .herramientas-inch-ci, .herramientas-ios, .herramientas-java, .herramientas-javacript, .herramientas-jekyll, .herramientas-jquery, .herramientas-jsbin, .herramientas-json, .herramientas-linux, .herramientas-lodash, .herramientas-lua, .herramientas-mariadb, .herramientas-marionette, .herramientas-markdown, .herramientas-mdn, .herramientas-mocha, .herramientas-modernizr, .herramientas-mongodb, .herramientas-mysql, .herramientas-nginx, .herramientas-nodejs, .herramientas-npm, .herramientas-opengl, .herramientas-openhub, .herramientas-opera, .herramientas-packagist, .herramientas-pear, .herramientas-perl, .herramientas-phantomjs, .herramientas-phonegap, .herramientas-php, .herramientas-polymer, .herramientas-postgresql, .herramientas-python, .herramientas-qt, .herramientas-react, .herramientas-redis, .herramientas-requirejs, .herramientas-ruby, .herramientas-rubygems, .herramientas-safari, .herramientas-sass, .herramientas-sourceforge, .herramientas-sourcegraph, .herramientas-sqlite, .herramientas-stack-overflow, .herramientas-susy, .herramientas-svg, .herramientas-svn, .herramientas-symfony, .herramientas-titanium, .herramientas-tizen, .herramientas-travis-ci, .herramientas-ubuntu, .herramientas-unity, .herramientas-versioneye, .herramientas-w3c, .herramientas-webgl, .herramientas-webkit, .herramientas-whatwg, .herramientas-windows8, .herramientas-wordpress, .herramientas-xamarin, .herramientas-yeoman, .herramientas-zend {
+  background-image: url('../images/herramientas-s4c6809e4d5.png');
+  background-repeat: no-repeat; }
+
+.herramientas-air {
+  background-position: 0 0; }
+
+.herramientas-android {
+  background-position: 0 -64px; }
+
+.herramientas-angular {
+  background-position: 0 -128px; }
+
+.herramientas-apache {
+  background-position: 0 -192px; }
+
+.herramientas-atom {
+  background-position: 0 -256px; }
+
+.herramientas-backbone {
+  background-position: 0 -320px; }
+
+.herramientas-bigcartel {
+  background-position: 0 -384px; }
+
+.herramientas-bitbucket {
+  background-position: 0 -448px; }
+
+.herramientas-blackberry {
+  background-position: 0 -512px; }
+
+.herramientas-bootstrap {
+  background-position: 0 -576px; }
+
+.herramientas-bower {
+  background-position: 0 -640px; }
+
+.herramientas-c {
+  background-position: 0 -704px; }
+
+.herramientas-chai {
+  background-position: 0 -768px; }
+
+.herramientas-chrome {
+  background-position: 0 -832px; }
+
+.herramientas-chromium {
+  background-position: 0 -896px; }
+
+.herramientas-code-climate {
+  background-position: 0 -960px; }
+
+.herramientas-codemirror {
+  background-position: 0 -1024px; }
+
+.herramientas-codepen {
+  background-position: 0 -1088px; }
+
+.herramientas-compass {
+  background-position: 0 -1152px; }
+
+.herramientas-composer {
+  background-position: 0 -1216px; }
+
+.herramientas-cordova {
+  background-position: 0 -1280px; }
+
+.herramientas-couchdb {
+  background-position: 0 -1344px; }
+
+.herramientas-coveralls {
+  background-position: 0 -1408px; }
+
+.herramientas-css3 {
+  background-position: 0 -1472px; }
+
+.herramientas-david-dm {
+  background-position: 0 -1536px; }
+
+.herramientas-debian {
+  background-position: 0 -1600px; }
+
+.herramientas-django {
+  background-position: 0 -1664px; }
+
+.herramientas-drupal {
+  background-position: 0 -1728px; }
+
+.herramientas-editorconfig {
+  background-position: 0 -1792px; }
+
+.herramientas-fedora {
+  background-position: 0 -1856px; }
+
+.herramientas-firefox-dev {
+  background-position: 0 -1920px; }
+
+.herramientas-firefox-os {
+  background-position: 0 -1984px; }
+
+.herramientas-firefox {
+  background-position: 0 -2048px; }
+
+.herramientas-flash {
+  background-position: 0 -2112px; }
+
+.herramientas-flattr {
+  background-position: 0 -2176px; }
+
+.herramientas-font-awesome {
+  background-position: 0 -2240px; }
+
+.herramientas-git {
+  background-position: 0 -2304px; }
+
+.herramientas-gitbook {
+  background-position: 0 -2368px; }
+
+.herramientas-github {
+  background-position: 0 -2432px; }
+
+.herramientas-gitlab {
+  background-position: 0 -2496px; }
+
+.herramientas-gnu {
+  background-position: 0 -2560px; }
+
+.herramientas-gradle {
+  background-position: 0 -2624px; }
+
+.herramientas-grunt {
+  background-position: 0 -2688px; }
+
+.herramientas-gtk {
+  background-position: 0 -2752px; }
+
+.herramientas-gulp {
+  background-position: 0 -2816px; }
+
+.herramientas-h5bp {
+  background-position: 0 -2880px; }
+
+.herramientas-hbase {
+  background-position: 0 -2944px; }
+
+.herramientas-html5 {
+  background-position: 0 -3008px; }
+
+.herramientas-humans-txt {
+  background-position: 0 -3072px; }
+
+.herramientas-ie {
+  background-position: 0 -3136px; }
+
+.herramientas-inch-ci {
+  background-position: 0 -3200px; }
+
+.herramientas-ios {
+  background-position: 0 -3264px; }
+
+.herramientas-java {
+  background-position: 0 -3328px; }
+
+.herramientas-javacript {
+  background-position: 0 -3392px; }
+
+.herramientas-jekyll {
+  background-position: 0 -3456px; }
+
+.herramientas-jquery {
+  background-position: 0 -3520px; }
+
+.herramientas-jsbin {
+  background-position: 0 -3584px; }
+
+.herramientas-json {
+  background-position: 0 -3648px; }
+
+.herramientas-linux {
+  background-position: 0 -3712px; }
+
+.herramientas-lodash {
+  background-position: 0 -3776px; }
+
+.herramientas-lua {
+  background-position: 0 -3840px; }
+
+.herramientas-mariadb {
+  background-position: 0 -3904px; }
+
+.herramientas-marionette {
+  background-position: 0 -3968px; }
+
+.herramientas-markdown {
+  background-position: 0 -4032px; }
+
+.herramientas-mdn {
+  background-position: 0 -4096px; }
+
+.herramientas-mocha {
+  background-position: 0 -4160px; }
+
+.herramientas-modernizr {
+  background-position: 0 -4224px; }
+
+.herramientas-mongodb {
+  background-position: 0 -4288px; }
+
+.herramientas-mysql {
+  background-position: 0 -4352px; }
+
+.herramientas-nginx {
+  background-position: 0 -4416px; }
+
+.herramientas-nodejs {
+  background-position: 0 -4480px; }
+
+.herramientas-npm {
+  background-position: 0 -4544px; }
+
+.herramientas-opengl {
+  background-position: 0 -4608px; }
+
+.herramientas-openhub {
+  background-position: 0 -4672px; }
+
+.herramientas-opera {
+  background-position: 0 -4736px; }
+
+.herramientas-packagist {
+  background-position: 0 -4800px; }
+
+.herramientas-pear {
+  background-position: 0 -4864px; }
+
+.herramientas-perl {
+  background-position: 0 -4928px; }
+
+.herramientas-phantomjs {
+  background-position: 0 -4992px; }
+
+.herramientas-phonegap {
+  background-position: 0 -5056px; }
+
+.herramientas-php {
+  background-position: 0 -5120px; }
+
+.herramientas-polymer {
+  background-position: 0 -5184px; }
+
+.herramientas-postgresql {
+  background-position: 0 -5248px; }
+
+.herramientas-python {
+  background-position: 0 -5312px; }
+
+.herramientas-qt {
+  background-position: 0 -5376px; }
+
+.herramientas-react {
+  background-position: 0 -5440px; }
+
+.herramientas-redis {
+  background-position: 0 -5504px; }
+
+.herramientas-requirejs {
+  background-position: 0 -5568px; }
+
+.herramientas-ruby {
+  background-position: 0 -5632px; }
+
+.herramientas-rubygems {
+  background-position: 0 -5696px; }
+
+.herramientas-safari {
+  background-position: 0 -5760px; }
+
+.herramientas-sass {
+  background-position: 0 -5824px; }
+
+.herramientas-sourceforge {
+  background-position: 0 -5888px; }
+
+.herramientas-sourcegraph {
+  background-position: 0 -5952px; }
+
+.herramientas-sqlite {
+  background-position: 0 -6016px; }
+
+.herramientas-stack-overflow {
+  background-position: 0 -6080px; }
+
+.herramientas-susy {
+  background-position: 0 -6144px; }
+
+.herramientas-svg {
+  background-position: 0 -6208px; }
+
+.herramientas-svn {
+  background-position: 0 -6272px; }
+
+.herramientas-symfony {
+  background-position: 0 -6336px; }
+
+.herramientas-titanium {
+  background-position: 0 -6400px; }
+
+.herramientas-tizen {
+  background-position: 0 -6464px; }
+
+.herramientas-travis-ci {
+  background-position: 0 -6528px; }
+
+.herramientas-ubuntu {
+  background-position: 0 -6592px; }
+
+.herramientas-unity {
+  background-position: 0 -6656px; }
+
+.herramientas-versioneye {
+  background-position: 0 -6720px; }
+
+.herramientas-w3c {
+  background-position: 0 -6784px; }
+
+.herramientas-webgl {
+  background-position: 0 -6848px; }
+
+.herramientas-webkit {
+  background-position: 0 -6912px; }
+
+.herramientas-whatwg {
+  background-position: 0 -6976px; }
+
+.herramientas-windows8 {
+  background-position: 0 -7040px; }
+
+.herramientas-wordpress {
+  background-position: 0 -7104px; }
+
+.herramientas-xamarin {
+  background-position: 0 -7168px; }
+
+.herramientas-yeoman {
+  background-position: 0 -7232px; }
+
+.herramientas-zend {
+  background-position: 0 -7296px; }
+
+.herramientas a {
+  display: block;
+  width: 64px;
+  height: 64px; }
+
+.herramientas ul {
+  display: flex;
+  margin-bottom: 36px;
+  margin-bottom: 2rem; }
+  .herramientas ul li {
+    margin-right: 15px;
+    text-align: center;
+    line-height: 36px;
+    line-height: 2rem; }
