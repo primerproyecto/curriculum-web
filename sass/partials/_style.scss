@@ -4,7 +4,7 @@
 @include border-box-sizing;
 
 html {
-  font-size: $base-font-size;
+  font-size: 100%;
   background-color: $color-fondo;
   color: $color-texto;
   font-family: 'PT Sans Narrow', sans-serif;
@@ -12,7 +12,7 @@ html {
 }
 h1 {
 @include adjust-font-size-to(33px);
-@include adjust-leading-to(2, 33px);
+@include adjust-leading-to(1, 33px);
 @include leader(1);
 padding-left: 15%;
 padding-right: 15%;
@@ -26,8 +26,8 @@ header h1 span {
 }
 h2 {
 @include adjust-font-size-to(30px);
-@include leader(1, 30px);
-@include trailer(1, 30px);
+@include leader(1/2, 30px);
+@include trailer(2/4, 30px);
 @include single-text-shadow;
 font-family: 'Montserrat', sans-serif;
 }
@@ -39,7 +39,7 @@ aside h2 {
 h3 {
 @include adjust-font-size-to(22px);
 @include adjust-leading-to(1, 22px);
-color: darken($color-blanco, 40% );
+color: darken($color-blanco, 70% );
 font-family: 'Lato', sans-serif;
 @include single-text-shadow;
 }
@@ -74,12 +74,16 @@ a, a:hover, a:active, a:visited {
   color: $color-enlace;
 }
 a.libro {
-  @include replace-text-with-dimensions("cover.png");
   display: block;
   @include border-radius(5px);
   @include box-shadow($color-texto 2px 2px 10px);
   @include trailer(1);
   @include leader(1);
+  background: {
+        image: image-url("cover.png");
+        repeat: no-repeat;
+        position: top left;
+      };
 }
 .ultimaspaginas {
   @include horizontal-list;
@@ -95,4 +99,14 @@ a.libro {
     @include trailer(6);
   }
 
+}
+.bloque {
+  @include trailer;
+  @include leader;
+}
+.empresa {
+  @include trailer(2/3);
+}
+.bold {
+  font-weight: bold;
 }
