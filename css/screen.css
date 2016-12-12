@@ -74,34 +74,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     content: " ";
     display: block;
     clear: both; }
-  head {
-    display: block;
-    position: fixed;
-    right: 10px;
-    top: 10px;
-    z-index: 999;
-    color: #333;
-    background: rgba(255, 255, 255, 0.25); }
-  head:before {
-    content: "|||";
-    display: block;
-    padding: 5px 10px;
-    font-family: sans-serif;
-    font-size: 16px;
-    font-weight: bold; }
-  head:hover {
-    background: rgba(255, 255, 255, 0.5);
-    color: red; }
-  head:hover ~ #page, head:hover ~ body #page {
-    position: relative; }
-    head:hover ~ #page:before, head:hover ~ body #page:before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      content: " ";
-      z-index: 998; }
 
 header {
   width: 100%;
@@ -162,8 +134,8 @@ h1 {
   font-size: 1.83333rem;
   line-height: 54px;
   line-height: 3rem;
-  line-height: 72px;
-  line-height: 4rem;
+  line-height: 36px;
+  line-height: 2rem;
   margin-top: 36px;
   margin-top: 2rem;
   padding-left: 15%;
@@ -244,26 +216,12 @@ a, a:hover, a:active, a:visited {
   color: #EC7263; }
 
 a.libro {
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-  text-transform: capitalize;
-  background-image: url('../images/cover.png?1447347685');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  width: 300px;
-  height: 355px;
-  display: block;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   -moz-box-shadow: #363636 2px 2px 10px;
   -webkit-box-shadow: #363636 2px 2px 10px;
-  box-shadow: #363636 2px 2px 10px;
-  margin-bottom: 36px;
-  margin-bottom: 2rem;
-  margin-top: 36px;
-  margin-top: 2rem; }
+  box-shadow: #363636 2px 2px 10px; }
 
 .ultimaspaginas {
   margin: 0;
@@ -662,3 +620,5 @@ a.libro {
     text-align: center;
     line-height: 36px;
     line-height: 2rem; }
+
+/*# sourceMappingURL=screen.css.map */
