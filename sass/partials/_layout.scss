@@ -13,13 +13,16 @@ $susy: (
   global-box-sizing: content-box,
   last-flow: to,
   debug: (
-    image: hide,
+    image: show,
     color: rgba(#66f, .25),
     output: overlay,
     toggle: top right,
   )
 );
-
+$breakpoints: (
+  'tablet' : ( min-width:  767px ),
+  'desktop'  : ( min-width: 1028px ),
+);
 #page {
 @include container;
 background-color: $color-blanco;
@@ -51,5 +54,11 @@ aside {
   @include span(8);  }
   aside {
   @include span(4 last);
+  }
+}
+.aficiones {
+  p:last-child{
+  //  @include padding-leader(2/3);
+    @include padding-leader(1/4);
   }
 }

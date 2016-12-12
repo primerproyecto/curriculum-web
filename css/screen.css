@@ -74,6 +74,44 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     content: " ";
     display: block;
     clear: both; }
+  head {
+    display: block;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 999;
+    color: #333;
+    background: rgba(255, 255, 255, 0.25); }
+  head:before {
+    content: "|||";
+    display: block;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold; }
+  head:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: red; }
+  head:hover ~ #page, head:hover ~ body #page {
+    position: relative; }
+    head:hover ~ #page:before, head:hover ~ body #page:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      content: " ";
+      z-index: 998;
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2NjZmZiIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNiM2IzZmYiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+      background-size: 100%;
+      background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(102, 102, 255, 0.25)), color-stop(50%, rgba(179, 179, 255, 0.25)), color-stop(50%, rgba(0, 0, 0, 0))), -webkit-gradient(linear, 50% 0%, 50% 1, color-stop(100%, rgba(0, 0, 0, 0.5)), color-stop(100%, rgba(0, 0, 0, 0)));
+      background-image: -moz-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 50%, rgba(0, 0, 0, 0) 50%), -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
+      background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 50%, rgba(0, 0, 0, 0) 50%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
+      background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 50%, rgba(0, 0, 0, 0) 50%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
+      background-size: 8.69565%, 100% 36px;
+      background-origin: content-box, border-box;
+      background-clip: content-box, border-box;
+      background-position: left top; }
 
 header {
   width: 100%;
@@ -114,6 +152,10 @@ aside {
     width: 30.43478%;
     float: right;
     margin-right: 0; } }
+.aficiones p:last-child {
+  padding-top: 9px;
+  padding-top: 0.5rem; }
+
 html {
   font-size: 112.5%;
   line-height: 2em; }
@@ -124,10 +166,16 @@ html {
   box-sizing: border-box; }
 
 html {
-  font-size: 18px;
+  font-size: 100%;
   background-color: #ededed;
   color: #363636;
   font-family: 'PT Sans Narrow', sans-serif; }
+  @media (min-width: 767px) {
+    html {
+      font-size: 110%; } }
+  @media (min-width: 1028px) {
+    html {
+      font-size: 125%; } }
 
 h1 {
   font-size: 33px;
@@ -198,12 +246,18 @@ li, dd {
   line-height: 2rem;
   font-family: 'PT Sans Narrow', sans-serif; }
 
-/*.datospersonales {
-  @include leader(0);
-  @include breakpoint($tabletas){
-    @include leader (5);
-  }
-}*/
+aside .datospersonales {
+  display: none; }
+  @media (min-width: 767px) {
+    aside .datospersonales {
+      display: block; } }
+
+main .datospersonales {
+  display: block; }
+  @media (min-width: 767px) {
+    main .datospersonales {
+      display: none; } }
+
 dt {
   float: left;
   min-width: 30px; }
