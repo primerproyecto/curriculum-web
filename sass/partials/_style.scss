@@ -5,6 +5,12 @@
 
 html {
   font-size: 100%;
+  @include respond-to('tablet'){
+    font-size: 110%;
+  };
+  @include respond-to('desktop'){
+    font-size: 125%;
+  };
   background-color: $color-fondo;
   color: $color-texto;
   font-family: 'PT Sans Narrow', sans-serif;
@@ -38,8 +44,9 @@ aside h2 {
 }
 h3 {
 @include adjust-font-size-to(22px);
-@include adjust-leading-to(1, 22px);
-color: darken($color-blanco, 70% );
+
+margin: rythym(0.5) 22px;
+color: darken($color-blanco, 40% );
 font-family: 'Lato', sans-serif;
 @include single-text-shadow;
 }
@@ -55,13 +62,21 @@ li, dd {
 @include adjust-font-size-to(22px);
 font-family: 'PT Sans Narrow', sans-serif;
 }
+aside .datospersonales{
+  display: none;
+  @include respond-to('tablet'){
+    display: block;
+  };
+}
+main .datospersonales{
+  display:block;
+  @include respond-to('tablet'){
+    display: none;
+  };
+}
+.datospersonales {
 
-/*.datospersonales {
-  @include leader(0);
-  @include breakpoint($tabletas){
-    @include leader (5);
-  }
-}*/
+}
 dt {
   float: left;
   min-width: 30px;
@@ -74,16 +89,9 @@ a, a:hover, a:active, a:visited {
   color: $color-enlace;
 }
 a.libro {
-  display: block;
   @include border-radius(5px);
   @include box-shadow($color-texto 2px 2px 10px);
-  @include trailer(1);
-  @include leader(1);
-  background: {
-        image: image-url("cover.png");
-        repeat: no-repeat;
-        position: top left;
-      };
+
 }
 .ultimaspaginas {
   @include horizontal-list;
@@ -100,13 +108,20 @@ a.libro {
   }
 
 }
-.bloque {
-  @include trailer;
-  @include leader;
+// SPRITE
+@import "herramientas/*.png";
+@include all-herramientas-sprites;
+.herramientas a {
+  display: block;
+  width: 64px;
+  height: 64px;
 }
-.empresa {
-  @include trailer(2/3);
-}
-.bold {
-  font-weight: bold;
+.herramientas ul {
+  display: flex;
+  li {
+    margin-right: 15px;
+    text-align: center;
+     @include adjust-leading-to(1);
+  }
+  @include trailer(1);
 }

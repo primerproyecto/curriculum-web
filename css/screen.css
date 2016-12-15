@@ -74,6 +74,44 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     content: " ";
     display: block;
     clear: both; }
+  head {
+    display: block;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 999;
+    color: #333;
+    background: rgba(255, 255, 255, 0.25); }
+  head:before {
+    content: "|||";
+    display: block;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold; }
+  head:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: red; }
+  head:hover ~ #page, head:hover ~ body #page {
+    position: relative; }
+    head:hover ~ #page:before, head:hover ~ body #page:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      content: " ";
+      z-index: 998;
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2NjZmZiIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNiM2IzZmYiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+      background-size: 100%;
+      background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(102, 102, 255, 0.25)), color-stop(50%, rgba(179, 179, 255, 0.25)), color-stop(50%, rgba(0, 0, 0, 0))), -webkit-gradient(linear, 50% 0%, 50% 1, color-stop(100%, rgba(0, 0, 0, 0.5)), color-stop(100%, rgba(0, 0, 0, 0)));
+      background-image: -moz-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 50%, rgba(0, 0, 0, 0) 50%), -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
+      background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 50%, rgba(0, 0, 0, 0) 50%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
+      background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 50%, rgba(0, 0, 0, 0) 50%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
+      background-size: 8.69565%, 100% 36px;
+      background-origin: content-box, border-box;
+      background-clip: content-box, border-box;
+      background-position: left top; }
 
 header {
   width: 100%;
@@ -114,6 +152,10 @@ aside {
     width: 30.43478%;
     float: right;
     margin-right: 0; } }
+.aficiones p:last-child {
+  padding-top: 9px;
+  padding-top: 0.5rem; }
+
 html {
   font-size: 112.5%;
   line-height: 2em; }
@@ -128,6 +170,12 @@ html {
   background-color: #ededed;
   color: #363636;
   font-family: 'PT Sans Narrow', sans-serif; }
+  @media (min-width: 767px) {
+    html {
+      font-size: 110%; } }
+  @media (min-width: 1028px) {
+    html {
+      font-size: 125%; } }
 
 h1 {
   font-size: 33px;
@@ -175,9 +223,8 @@ h3 {
   font-size: 1.22222rem;
   line-height: 36px;
   line-height: 2rem;
-  line-height: 36px;
-  line-height: 2rem;
-  color: #4d4d4d;
+  margin: rythym(0.5) 22px;
+  color: #999999;
   font-family: 'Lato', sans-serif;
   text-shadow: 0px 0px 1px #aaaaaa; }
 
@@ -199,12 +246,18 @@ li, dd {
   line-height: 2rem;
   font-family: 'PT Sans Narrow', sans-serif; }
 
-/*.datospersonales {
-  @include leader(0);
-  @include breakpoint($tabletas){
-    @include leader (5);
-  }
-}*/
+aside .datospersonales {
+  display: none; }
+  @media (min-width: 767px) {
+    aside .datospersonales {
+      display: block; } }
+
+main .datospersonales {
+  display: block; }
+  @media (min-width: 767px) {
+    main .datospersonales {
+      display: none; } }
+
 dt {
   float: left;
   min-width: 30px; }
@@ -217,20 +270,12 @@ a, a:hover, a:active, a:visited {
   color: #EC7263; }
 
 a.libro {
-  display: block;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   -moz-box-shadow: #363636 2px 2px 10px;
   -webkit-box-shadow: #363636 2px 2px 10px;
-  box-shadow: #363636 2px 2px 10px;
-  margin-bottom: 36px;
-  margin-bottom: 2rem;
-  margin-top: 36px;
-  margin-top: 2rem;
-  background-image: url('../images/cover.png?1481477539');
-  background-repeat: no-repeat;
-  background-position: top left; }
+  box-shadow: #363636 2px 2px 10px; }
 
 .ultimaspaginas {
   margin: 0;
@@ -266,15 +311,368 @@ a.libro {
     margin-bottom: 216px;
     margin-bottom: 12rem; } }
 
-.bloque {
+.herramientas-sprite, .herramientas-air, .herramientas-android, .herramientas-angular, .herramientas-apache, .herramientas-atom, .herramientas-backbone, .herramientas-bigcartel, .herramientas-bitbucket, .herramientas-blackberry, .herramientas-bootstrap, .herramientas-bower, .herramientas-c, .herramientas-chai, .herramientas-chrome, .herramientas-chromium, .herramientas-code-climate, .herramientas-codemirror, .herramientas-codepen, .herramientas-compass, .herramientas-composer, .herramientas-cordova, .herramientas-couchdb, .herramientas-coveralls, .herramientas-css3, .herramientas-david-dm, .herramientas-debian, .herramientas-django, .herramientas-drupal, .herramientas-editorconfig, .herramientas-fedora, .herramientas-firefox-dev, .herramientas-firefox-os, .herramientas-firefox, .herramientas-flash, .herramientas-flattr, .herramientas-font-awesome, .herramientas-git, .herramientas-gitbook, .herramientas-github, .herramientas-gitlab, .herramientas-gnu, .herramientas-gradle, .herramientas-grunt, .herramientas-gtk, .herramientas-gulp, .herramientas-h5bp, .herramientas-hbase, .herramientas-html5, .herramientas-humans-txt, .herramientas-ie, .herramientas-inch-ci, .herramientas-ios, .herramientas-java, .herramientas-javacript, .herramientas-jekyll, .herramientas-jquery, .herramientas-jsbin, .herramientas-json, .herramientas-linux, .herramientas-lodash, .herramientas-lua, .herramientas-mariadb, .herramientas-marionette, .herramientas-markdown, .herramientas-mdn, .herramientas-mocha, .herramientas-modernizr, .herramientas-mongodb, .herramientas-mysql, .herramientas-nginx, .herramientas-nodejs, .herramientas-npm, .herramientas-opengl, .herramientas-openhub, .herramientas-opera, .herramientas-packagist, .herramientas-pear, .herramientas-perl, .herramientas-phantomjs, .herramientas-phonegap, .herramientas-php, .herramientas-polymer, .herramientas-postgresql, .herramientas-python, .herramientas-qt, .herramientas-react, .herramientas-redis, .herramientas-requirejs, .herramientas-ruby, .herramientas-rubygems, .herramientas-safari, .herramientas-sass, .herramientas-sourceforge, .herramientas-sourcegraph, .herramientas-sqlite, .herramientas-stack-overflow, .herramientas-susy, .herramientas-svg, .herramientas-svn, .herramientas-symfony, .herramientas-titanium, .herramientas-tizen, .herramientas-travis-ci, .herramientas-ubuntu, .herramientas-unity, .herramientas-versioneye, .herramientas-w3c, .herramientas-webgl, .herramientas-webkit, .herramientas-whatwg, .herramientas-windows8, .herramientas-wordpress, .herramientas-xamarin, .herramientas-yeoman, .herramientas-zend {
+  background-image: url('../images/herramientas-s4c6809e4d5.png');
+  background-repeat: no-repeat; }
+
+.herramientas-air {
+  background-position: 0 0; }
+
+.herramientas-android {
+  background-position: 0 -64px; }
+
+.herramientas-angular {
+  background-position: 0 -128px; }
+
+.herramientas-apache {
+  background-position: 0 -192px; }
+
+.herramientas-atom {
+  background-position: 0 -256px; }
+
+.herramientas-backbone {
+  background-position: 0 -320px; }
+
+.herramientas-bigcartel {
+  background-position: 0 -384px; }
+
+.herramientas-bitbucket {
+  background-position: 0 -448px; }
+
+.herramientas-blackberry {
+  background-position: 0 -512px; }
+
+.herramientas-bootstrap {
+  background-position: 0 -576px; }
+
+.herramientas-bower {
+  background-position: 0 -640px; }
+
+.herramientas-c {
+  background-position: 0 -704px; }
+
+.herramientas-chai {
+  background-position: 0 -768px; }
+
+.herramientas-chrome {
+  background-position: 0 -832px; }
+
+.herramientas-chromium {
+  background-position: 0 -896px; }
+
+.herramientas-code-climate {
+  background-position: 0 -960px; }
+
+.herramientas-codemirror {
+  background-position: 0 -1024px; }
+
+.herramientas-codepen {
+  background-position: 0 -1088px; }
+
+.herramientas-compass {
+  background-position: 0 -1152px; }
+
+.herramientas-composer {
+  background-position: 0 -1216px; }
+
+.herramientas-cordova {
+  background-position: 0 -1280px; }
+
+.herramientas-couchdb {
+  background-position: 0 -1344px; }
+
+.herramientas-coveralls {
+  background-position: 0 -1408px; }
+
+.herramientas-css3 {
+  background-position: 0 -1472px; }
+
+.herramientas-david-dm {
+  background-position: 0 -1536px; }
+
+.herramientas-debian {
+  background-position: 0 -1600px; }
+
+.herramientas-django {
+  background-position: 0 -1664px; }
+
+.herramientas-drupal {
+  background-position: 0 -1728px; }
+
+.herramientas-editorconfig {
+  background-position: 0 -1792px; }
+
+.herramientas-fedora {
+  background-position: 0 -1856px; }
+
+.herramientas-firefox-dev {
+  background-position: 0 -1920px; }
+
+.herramientas-firefox-os {
+  background-position: 0 -1984px; }
+
+.herramientas-firefox {
+  background-position: 0 -2048px; }
+
+.herramientas-flash {
+  background-position: 0 -2112px; }
+
+.herramientas-flattr {
+  background-position: 0 -2176px; }
+
+.herramientas-font-awesome {
+  background-position: 0 -2240px; }
+
+.herramientas-git {
+  background-position: 0 -2304px; }
+
+.herramientas-gitbook {
+  background-position: 0 -2368px; }
+
+.herramientas-github {
+  background-position: 0 -2432px; }
+
+.herramientas-gitlab {
+  background-position: 0 -2496px; }
+
+.herramientas-gnu {
+  background-position: 0 -2560px; }
+
+.herramientas-gradle {
+  background-position: 0 -2624px; }
+
+.herramientas-grunt {
+  background-position: 0 -2688px; }
+
+.herramientas-gtk {
+  background-position: 0 -2752px; }
+
+.herramientas-gulp {
+  background-position: 0 -2816px; }
+
+.herramientas-h5bp {
+  background-position: 0 -2880px; }
+
+.herramientas-hbase {
+  background-position: 0 -2944px; }
+
+.herramientas-html5 {
+  background-position: 0 -3008px; }
+
+.herramientas-humans-txt {
+  background-position: 0 -3072px; }
+
+.herramientas-ie {
+  background-position: 0 -3136px; }
+
+.herramientas-inch-ci {
+  background-position: 0 -3200px; }
+
+.herramientas-ios {
+  background-position: 0 -3264px; }
+
+.herramientas-java {
+  background-position: 0 -3328px; }
+
+.herramientas-javacript {
+  background-position: 0 -3392px; }
+
+.herramientas-jekyll {
+  background-position: 0 -3456px; }
+
+.herramientas-jquery {
+  background-position: 0 -3520px; }
+
+.herramientas-jsbin {
+  background-position: 0 -3584px; }
+
+.herramientas-json {
+  background-position: 0 -3648px; }
+
+.herramientas-linux {
+  background-position: 0 -3712px; }
+
+.herramientas-lodash {
+  background-position: 0 -3776px; }
+
+.herramientas-lua {
+  background-position: 0 -3840px; }
+
+.herramientas-mariadb {
+  background-position: 0 -3904px; }
+
+.herramientas-marionette {
+  background-position: 0 -3968px; }
+
+.herramientas-markdown {
+  background-position: 0 -4032px; }
+
+.herramientas-mdn {
+  background-position: 0 -4096px; }
+
+.herramientas-mocha {
+  background-position: 0 -4160px; }
+
+.herramientas-modernizr {
+  background-position: 0 -4224px; }
+
+.herramientas-mongodb {
+  background-position: 0 -4288px; }
+
+.herramientas-mysql {
+  background-position: 0 -4352px; }
+
+.herramientas-nginx {
+  background-position: 0 -4416px; }
+
+.herramientas-nodejs {
+  background-position: 0 -4480px; }
+
+.herramientas-npm {
+  background-position: 0 -4544px; }
+
+.herramientas-opengl {
+  background-position: 0 -4608px; }
+
+.herramientas-openhub {
+  background-position: 0 -4672px; }
+
+.herramientas-opera {
+  background-position: 0 -4736px; }
+
+.herramientas-packagist {
+  background-position: 0 -4800px; }
+
+.herramientas-pear {
+  background-position: 0 -4864px; }
+
+.herramientas-perl {
+  background-position: 0 -4928px; }
+
+.herramientas-phantomjs {
+  background-position: 0 -4992px; }
+
+.herramientas-phonegap {
+  background-position: 0 -5056px; }
+
+.herramientas-php {
+  background-position: 0 -5120px; }
+
+.herramientas-polymer {
+  background-position: 0 -5184px; }
+
+.herramientas-postgresql {
+  background-position: 0 -5248px; }
+
+.herramientas-python {
+  background-position: 0 -5312px; }
+
+.herramientas-qt {
+  background-position: 0 -5376px; }
+
+.herramientas-react {
+  background-position: 0 -5440px; }
+
+.herramientas-redis {
+  background-position: 0 -5504px; }
+
+.herramientas-requirejs {
+  background-position: 0 -5568px; }
+
+.herramientas-ruby {
+  background-position: 0 -5632px; }
+
+.herramientas-rubygems {
+  background-position: 0 -5696px; }
+
+.herramientas-safari {
+  background-position: 0 -5760px; }
+
+.herramientas-sass {
+  background-position: 0 -5824px; }
+
+.herramientas-sourceforge {
+  background-position: 0 -5888px; }
+
+.herramientas-sourcegraph {
+  background-position: 0 -5952px; }
+
+.herramientas-sqlite {
+  background-position: 0 -6016px; }
+
+.herramientas-stack-overflow {
+  background-position: 0 -6080px; }
+
+.herramientas-susy {
+  background-position: 0 -6144px; }
+
+.herramientas-svg {
+  background-position: 0 -6208px; }
+
+.herramientas-svn {
+  background-position: 0 -6272px; }
+
+.herramientas-symfony {
+  background-position: 0 -6336px; }
+
+.herramientas-titanium {
+  background-position: 0 -6400px; }
+
+.herramientas-tizen {
+  background-position: 0 -6464px; }
+
+.herramientas-travis-ci {
+  background-position: 0 -6528px; }
+
+.herramientas-ubuntu {
+  background-position: 0 -6592px; }
+
+.herramientas-unity {
+  background-position: 0 -6656px; }
+
+.herramientas-versioneye {
+  background-position: 0 -6720px; }
+
+.herramientas-w3c {
+  background-position: 0 -6784px; }
+
+.herramientas-webgl {
+  background-position: 0 -6848px; }
+
+.herramientas-webkit {
+  background-position: 0 -6912px; }
+
+.herramientas-whatwg {
+  background-position: 0 -6976px; }
+
+.herramientas-windows8 {
+  background-position: 0 -7040px; }
+
+.herramientas-wordpress {
+  background-position: 0 -7104px; }
+
+.herramientas-xamarin {
+  background-position: 0 -7168px; }
+
+.herramientas-yeoman {
+  background-position: 0 -7232px; }
+
+.herramientas-zend {
+  background-position: 0 -7296px; }
+
+.herramientas a {
+  display: block;
+  width: 64px;
+  height: 64px; }
+
+.herramientas ul {
+  display: flex;
   margin-bottom: 36px;
-  margin-bottom: 2rem;
-  margin-top: 36px;
-  margin-top: 2rem; }
+  margin-bottom: 2rem; }
+  .herramientas ul li {
+    margin-right: 15px;
+    text-align: center;
+    line-height: 36px;
+    line-height: 2rem; }
 
-.empresa {
-  margin-bottom: 24px;
-  margin-bottom: 1.33333rem; }
-
-.bold {
-  font-weight: bold; }
+/*# sourceMappingURL=screen.css.map */

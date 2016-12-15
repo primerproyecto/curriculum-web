@@ -10,12 +10,14 @@
 @import "compass/typography/vertical_rhythm";
 @import "compass/typography/text/replacement";
 @import "compass/typography/lists/horizontal-list";
+@import "compass/utilities/sprites";
 @import "compass/css3";
 @import "partials/fonts";
 // VARIABLES
 @import "partials/variables";
 
 // estilos layouts susy
+@import "partials/mixins";
 @import "partials/layout";
 
 // estilos particulares
